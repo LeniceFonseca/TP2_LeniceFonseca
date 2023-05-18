@@ -4,4 +4,6 @@ public class Alumni {
     private String funcao;
     private String email;
 
+    public Alumni() {
+    }
 }

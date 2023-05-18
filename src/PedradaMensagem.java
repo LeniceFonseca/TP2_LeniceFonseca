@@ -2,6 +2,9 @@ public class PedradaMensagem extends Pedrada{
 
     private String mensagem;
 
+    public PedradaMensagem() {
+    }
+
     public String getTexto() {
         return mensagem;
     }

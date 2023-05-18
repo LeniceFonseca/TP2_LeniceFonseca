@@ -8,6 +8,9 @@ public class PedradaEvento extends Pedrada{
     private String entrada;
     private String status;
 
+    public PedradaEvento() {
+    }
+
     public Date getData() {
         return data;
     }

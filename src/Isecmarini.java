@@ -12,6 +12,9 @@ public abstract class Isecmarini implements MembroRede{
     private ArrayList<Pedrada> nhasPedrada;
     private boolean visivel;
 
+    public Isecmarini() {
+    }
+
     public abstract void signUp();
     public abstract void signIn();
     public abstract void resetPassword();

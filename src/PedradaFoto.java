@@ -3,6 +3,9 @@ public class PedradaFoto extends Pedrada{
     private String nomeFicheiro;
     private String legenda;
 
+    public PedradaFoto() {
+    }
+
     public String getNomeFicheiro() {
         return nomeFicheiro;
     }

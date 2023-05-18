@@ -4,4 +4,6 @@ public interface GestorEvento {
     void novoRecorrente();
     void convidar();
 
+
+
 }

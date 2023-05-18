@@ -4,6 +4,9 @@ public class Professor implements ModeradorGrupo{
     private String grau;
     private String departamento;
 
+    public Professor() {
+    }
+
     public void mandaColegas(){}
 
     @Override

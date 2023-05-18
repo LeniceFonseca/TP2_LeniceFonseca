@@ -8,6 +8,9 @@ public abstract class Pedrada {
     private int gostos;
     private ArrayList<Comentario> comentarios;
 
+    public Pedrada() {
+    }
+
     public abstract void gosto();
     public abstract void traGosto();
     public abstract Comentario masRiola();
