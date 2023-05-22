@@ -15,10 +15,10 @@ public class PedradaDigital extends Isecmarini{
     private String eventos;
 
     public PedradaDigital(String username, String email, String nome, String apelido, String alcunha,
-                          String password, String biografia, String categoria, boolean visivel,
+                          String password, String biografia, String categoria,
                           String pseudonimo, ArrayList<Isecmarini> comunidade, String grupos, String eventos) {
 
-        super(username, email, nome, apelido, alcunha, password, biografia, categoria, visivel, pseudonimo);
+        super(username, email, nome, apelido, alcunha, password, biografia, categoria, pseudonimo);
         this.comunidade = comunidade;
         this.grupos = grupos;
         this.eventos = eventos;
@@ -55,6 +55,12 @@ public class PedradaDigital extends Isecmarini{
         this.eventos = eventos;
     }
 
+
+    /**
+     * Este metodo permite que usuarios da rede social Pedrada Digital facam LogIn
+     *
+     * @throws SQLException caso nao consiga aceder a base de dados.
+     */
     public void signIn(){
         String sql = "SELECT * FROM usuarios WHERE nome = ? AND password = ?";
         PreparedStatement preparedStatement = null;
@@ -80,6 +86,13 @@ public class PedradaDigital extends Isecmarini{
             e.printStackTrace();
         }
     }
+
+
+    /**
+     * Este metodo permite que usuarios da rede social Pedrada Digital facam LogOut
+     *
+     * @throws SQLException caso nao consiga aceder a base de dados.
+     */
     public void signOff(){
         String sql = "SELECT * FROM usuarios WHERE nome = ? AND password = ?";
         PreparedStatement preparedStatement = null;
@@ -103,6 +116,14 @@ public class PedradaDigital extends Isecmarini{
             e.printStackTrace();
         }
     }
+
+
+    /**
+     * Este metodo permite que usuarios da rede social Pedrada Digital criam suas contas
+     *
+     * @throws SQLException caso nao consiga aceder a base de dados.
+     * @return perfil criado
+     */
     public Isecmarini signUp(){
 //        Scanner scanner = new Scanner(System.in);
 //        boolean visibilidade = false;
@@ -165,9 +186,18 @@ public class PedradaDigital extends Isecmarini{
         }
 
         return new PedradaDigital(getUsername(), getEmail(),getNome(), getApelido(), getAlcunha(), getPassword(),getBiografia(),
-               getCategoria(),isVisivel(), getPseudonimo(), null, null, null);
+               getCategoria(), getPseudonimo(), null, null, null);
     }
 
+
+
+    /**
+     * Este metodo permite que usuarios da rede social Pedrada Digital mudem a sua senha
+     *
+     * @param senha a ser alterada
+     * @param novaSenha
+     * @throws SQLException caso nao consiga aceder a base de dados.
+     */
     @Override
     public void resetPassword(String senha, String novaSenha) {
         String sql = "UPDATE usuarios SET password = ? WHERE password = ?";
@@ -195,6 +225,15 @@ public class PedradaDigital extends Isecmarini{
         }
     }
 
+
+
+    /**
+     * Este metodo permite que usuarios da rede social Pedrada Digital veja o perfil de outro usuario
+     *
+     * @param nome da pessoa cujo deseja visitar o perfil
+     * @param apelido da pessoa cujo deseja visitar o perfil
+     * @throws SQLException caso nao consiga aceder a base de dados.
+     */
     @Override
     public void verPerfil(String nome, String apelido) {
         String sql = "SELECT * FROM usuarios WHERE nome = ? AND apelido = ?";
@@ -209,16 +248,18 @@ public class PedradaDigital extends Isecmarini{
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
+                System.out.println();
                 System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------");
+                System.out.println("Prfil de " + resultSet.getString("nome") + " " + resultSet.getString("apelido"));
                 System.out.println("Meu nome eh " + resultSet.getString("nome") + " " + resultSet.getString("apelido") +
-                        " mais conhecido por " + resultSet.getString("alcunha") + " e sou " + resultSet.getString("categoria") +
+                        " mais conhecido(a) por " + resultSet.getString("alcunha") + " e sou " + resultSet.getString("categoria") +
                         " da UTA. Aqui vao mais algumas informacoes sobre mim: ");
                 System.out.println("Email: " + resultSet.getString("email"));
                 if (!(resultSet.getString("biografia").equals(""))) {
                     System.out.println("Biografia: " + resultSet.getString("biografia"));
                 }
                 System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------");
-
+                System.out.println();
             }
 
             preparedStatement.execute();
@@ -231,7 +272,8 @@ public class PedradaDigital extends Isecmarini{
 
     @Override
     public void defenirVisibilidade() {
-
+        PedradaDigital pedradaDigital = new PedradaDigital();
+        pedradaDigital.setVisivel(true);
     }
 
     @Override
@@ -239,9 +281,46 @@ public class PedradaDigital extends Isecmarini{
         return null;
     }
 
+
+    /**
+     * Este metodo permite que usuarios da rede social Pedrada Digital veja o seu proprio perfil
+     *
+     * @throws SQLException caso nao consiga aceder a base de dados.
+     */
     @Override
     public void mostraPerfil() {
+        String sql = "SELECT * FROM usuarios WHERE nome = ? AND apelido = ?";
+        PreparedStatement preparedStatement = null;
 
+        try {
+
+            preparedStatement = Conexao.getConnection().prepareStatement(sql);
+            preparedStatement.setString(1, getNome());
+            preparedStatement.setString(2, getApelido());
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                System.out.println();
+                System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------");
+                System.out.println("Meu perfil");
+                System.out.println("Meu nome eh " + resultSet.getString("nome") + " " + resultSet.getString("apelido") +
+                        " mais conhecido(a) por " + resultSet.getString("alcunha") + " e sou " + resultSet.getString("categoria") +
+                        " da UTA. Aqui vao mais algumas informacoes sobre mim: ");
+                System.out.println("Email: " + resultSet.getString("email"));
+                if (!(resultSet.getString("biografia").equals(""))) {
+                    System.out.println("Biografia: " + resultSet.getString("biografia"));
+                }
+                System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------");
+                System.out.println();
+            }
+
+            preparedStatement.execute();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

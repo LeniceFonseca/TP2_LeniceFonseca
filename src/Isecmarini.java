@@ -21,7 +21,7 @@ public abstract class Isecmarini implements MembroRede{
     }
 
     public Isecmarini(String username, String email, String nome, String apelido, String alcunha,
-                      String password, String biografia, String categoria, boolean visivel, String pseudonimo) {
+                      String password, String biografia, String categoria, String pseudonimo) {
         this.username = username;
         this.email = email;
         this.nome = nome;
