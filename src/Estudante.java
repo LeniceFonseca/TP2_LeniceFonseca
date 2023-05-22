@@ -104,7 +104,7 @@ public class Estudante extends Isecmarini implements GestorEvento{
     }
 
     @Override
-    public void mudarVisibilidade() {
+    public void mudarVisibilidade(PedradaDigital pedradaDigital) {
 
     }
 

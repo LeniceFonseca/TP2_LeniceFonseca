@@ -323,9 +323,23 @@ public class PedradaDigital extends Isecmarini{
         }
     }
 
-    @Override
-    public void mudarVisibilidade() {
 
+
+    /**
+     * Este metodo permite que usuarios da rede social Pedrada Digital mudem o seu estado
+     * de ativo para inativo e vice-versa
+     *
+     * @param pedradaDigital perfil do usuario
+     * @throws SQLException caso nao consiga aceder a base de dados.
+     */
+    @Override
+    public void mudarVisibilidade(PedradaDigital pedradaDigital) {
+        if (pedradaDigital.isVisivel()) {
+            pedradaDigital.setVisivel(false);
+        }
+        else {
+            pedradaDigital.setVisivel(true);
+        }
     }
 
     @Override
