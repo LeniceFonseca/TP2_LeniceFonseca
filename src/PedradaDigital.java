@@ -161,7 +161,7 @@ public class PedradaDigital extends Isecmarini{
 //            System.out.println("Invalido!");
 //        }
 
-        String sql = "INSERT INTO usuarios (nome, apelido, email, username, password, categoria, alcunha, pseudonimo, visibilidade, biografia) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO usuarios (nome, apelido, email, username, password, categoria, alcunha, pseudonimo, biografia) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement preparedStatement = null;
 
         try {
@@ -175,8 +175,7 @@ public class PedradaDigital extends Isecmarini{
             preparedStatement.setString(6, getCategoria());
             preparedStatement.setString(7, getAlcunha());
             preparedStatement.setString(8, getPseudonimo());
-            preparedStatement.setString(9, String.valueOf(isVisivel()));
-            preparedStatement.setString(10, getBiografia());
+            preparedStatement.setString(9, getBiografia());
 
             preparedStatement.execute();
             preparedStatement.close();

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="90bf6a89-f8ca-4114-9f34-a943a7e1f68b" name="Changes" comment="pedrada digital">
+      <change beforePath="$PROJECT_DIR$/src/Comentario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Comentario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pedrada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pedrada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PedradaDigital.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PedradaDigital.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PedradaEvento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PedradaEvento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PedradaFoto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PedradaFoto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PedradaMensagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PedradaMensagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestePedrada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestePedrada.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2PyY0SQQzrRzO5zI27zQprTPYwJ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/AdminIECM/Documents/POO-23/mysql-connector-j-8.0.32/mysql-connector-j-8.0.32.jar",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="BDConnection" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="90bf6a89-f8ca-4114-9f34-a943a7e1f68b" name="Changes" comment="" />
+      <created>1684430616389</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684430616389</updated>
+    </task>
+    <task id="LOCAL-00001" summary="v1">
+      <created>1684436334950</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684436334950</updated>
+    </task>
+    <task id="LOCAL-00002" summary="v2">
+      <created>1684439909973</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684439909973</updated>
+    </task>
+    <task id="LOCAL-00003" summary="v3">
+      <created>1684759105448</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684759105448</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ver perfil completo">
+      <created>1684762167656</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684762167656</updated>
+    </task>
+    <task id="LOCAL-00005" summary="mostrar perfil">
+      <created>1684765047516</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684765047516</updated>
+    </task>
+    <task id="LOCAL-00006" summary="mudar visibilidade">
+      <created>1684765465814</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684765465814</updated>
+    </task>
+    <task id="LOCAL-00007" summary="pedrada digital">
+      <created>1684768749765</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1684768749765</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="v1" />
+    <MESSAGE value="v2" />
+    <MESSAGE value="v3" />
+    <MESSAGE value="ver perfil completo" />
+    <MESSAGE value="mostrar perfil" />
+    <MESSAGE value="mudar visibilidade" />
+    <MESSAGE value="pedrada digital" />
+    <option name="LAST_COMMIT_MESSAGE" value="pedrada digital" />
+  </component>
+</project>

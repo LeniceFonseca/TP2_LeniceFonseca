@@ -1,11 +1,11 @@
+import java.time.LocalDateTime;
+
 public class PedradaMensagem extends Pedrada{
 
     private String mensagem;
 
-    public PedradaMensagem() {
-    }
-
-    public PedradaMensagem(String mensagem) {
+    public PedradaMensagem(LocalDateTime data, String autor, String mensagem) {
+        super(data, autor);
         this.mensagem = mensagem;
     }
 
@@ -38,6 +38,11 @@ public class PedradaMensagem extends Pedrada{
 
     @Override
     public void display() {
+
+    }
+
+    @Override
+    public void criarPost() {
 
     }
 }

@@ -1,17 +1,16 @@
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class PedradaEvento extends Pedrada{
 
     private TipoEvento tipo;
-    private Date data;
+    private LocalDateTime data;
     private String local;
     private String entrada;
     private String status;
 
-    public PedradaEvento() {
-    }
 
-    public PedradaEvento(TipoEvento tipo, Date data, String local, String entrada, String status) {
+    public PedradaEvento(String autor, TipoEvento tipo, LocalDateTime data, String local, String entrada, String status) {
+        super(data, autor);
         this.tipo = tipo;
         this.data = data;
         this.local = local;
@@ -35,11 +34,12 @@ public class PedradaEvento extends Pedrada{
         this.entrada = entrada;
     }
 
-    public Date getData() {
+    @Override
+    public LocalDateTime getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(LocalDateTime data) {
         this.data = data;
     }
 
@@ -78,4 +78,10 @@ public class PedradaEvento extends Pedrada{
     public void display() {
 
     }
+
+    @Override
+    public void criarPost() {
+
+    }
+
 }
