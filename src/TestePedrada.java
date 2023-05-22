@@ -17,16 +17,13 @@ public class TestePedrada {
 
 //        pedradaDigital1.signUp();
 //        pedradaDigital2.signUp();
+//        pedradaDigital1.signIn();
+//        pedradaDigital1.signOff();
+//        pedradaDigital1.resetPassword("lens123", "lp123");
 
-
-        System.out.print("Nome: ");
-        String nome = scanner.next();
-        System.out.print("Senha: ");
-        String password = scanner.next();
-
-        PedradaDigital p = new PedradaDigital(nome, password);
-
-        p.signIn();
+        PedradaDigital pedradaDigital = new PedradaDigital();
+        pedradaDigital.verPerfil("Lenice", "Fonseca");
+        pedradaDigital.verPerfil("Joao", "Barbosa");
 
     }
 }

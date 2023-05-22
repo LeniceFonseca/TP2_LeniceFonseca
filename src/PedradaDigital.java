@@ -28,6 +28,9 @@ public class PedradaDigital extends Isecmarini{
         super(username, password);
     }
 
+    public PedradaDigital() {
+    }
+
     public ArrayList<Isecmarini> getComunidade() {
         return comunidade;
     }
@@ -65,9 +68,9 @@ public class PedradaDigital extends Isecmarini{
             ResultSet resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()) {
-                System.out.println("Dados encontrados no banco de dados.");
+                System.out.println("Signed in!");
             } else {
-                System.out.println("Dados não encontrados no banco de dados.");
+                System.out.println("Nome ou senha estao incorretas!");
             }
 
             preparedStatement.execute();
@@ -77,7 +80,29 @@ public class PedradaDigital extends Isecmarini{
             e.printStackTrace();
         }
     }
-    public void signOff(){}
+    public void signOff(){
+        String sql = "SELECT * FROM usuarios WHERE nome = ? AND password = ?";
+        PreparedStatement preparedStatement = null;
+
+        try {
+
+            preparedStatement = Conexao.getConnection().prepareStatement(sql);
+            preparedStatement.setString(1, getNome());
+            preparedStatement.setString(2, getPassword());
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                System.out.println("Signed off!");
+            }
+
+            preparedStatement.execute();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
     public Isecmarini signUp(){
 //        Scanner scanner = new Scanner(System.in);
 //        boolean visibilidade = false;
@@ -144,13 +169,64 @@ public class PedradaDigital extends Isecmarini{
     }
 
     @Override
-    public void resetPassword() {
+    public void resetPassword(String senha, String novaSenha) {
+        String sql = "UPDATE usuarios SET password = ? WHERE password = ?";
+        PreparedStatement preparedStatement = null;
 
+        try {
+
+            preparedStatement = Conexao.getConnection().prepareStatement(sql);
+            preparedStatement.setString(1, novaSenha);
+            preparedStatement.setString(2, getPassword());
+
+            int linhasAfetadas = preparedStatement.executeUpdate();
+
+            if (linhasAfetadas > 0) {
+                System.out.println("Senha alterada com sucesso.");
+            } else {
+                System.out.println("Nenhum registro encontrado para a senha fornecida.");
+            }
+
+            preparedStatement.execute();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
-    public void verPerfil() {
+    public void verPerfil(String nome, String apelido) {
+        String sql = "SELECT * FROM usuarios WHERE nome = ? AND apelido = ?";
+        PreparedStatement preparedStatement = null;
 
+        try {
+
+            preparedStatement = Conexao.getConnection().prepareStatement(sql);
+            preparedStatement.setString(1, nome);
+            preparedStatement.setString(2, apelido);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------");
+                System.out.println("Meu nome eh " + resultSet.getString("nome") + " " + resultSet.getString("apelido") +
+                        " mais conhecido por " + resultSet.getString("alcunha") + " e sou " + resultSet.getString("categoria") +
+                        " da UTA. Aqui vao mais algumas informacoes sobre mim: ");
+                System.out.println("Email: " + resultSet.getString("email"));
+                if (!(resultSet.getString("biografia").equals(""))) {
+                    System.out.println("Biografia: " + resultSet.getString("biografia"));
+                }
+                System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------");
+
+            }
+
+            preparedStatement.execute();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

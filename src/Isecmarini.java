@@ -114,8 +114,8 @@ public abstract class Isecmarini implements MembroRede{
         this.visivel = visivel;
     }
 
-    public abstract void resetPassword();
-    public abstract void verPerfil();
+    public abstract void resetPassword(String senha, String novaSenha);
+    public abstract void verPerfil(String nome, String apelido);
     public abstract void defenirVisibilidade();
 
 }

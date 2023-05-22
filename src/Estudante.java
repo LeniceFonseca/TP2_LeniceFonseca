@@ -63,12 +63,12 @@ public class Estudante extends Isecmarini implements GestorEvento{
 
 
     @Override
-    public void resetPassword() {
+    public void resetPassword(String nome, String novaSenha) {
 
     }
 
     @Override
-    public void verPerfil() {
+    public void verPerfil(String nome, String apelido) {
 
     }
 
