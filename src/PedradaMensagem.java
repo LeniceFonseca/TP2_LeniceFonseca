@@ -5,6 +5,18 @@ public class PedradaMensagem extends Pedrada{
     public PedradaMensagem() {
     }
 
+    public PedradaMensagem(String mensagem) {
+        this.mensagem = mensagem;
+    }
+
+    public String getMensagem() {
+        return mensagem;
+    }
+
+    public void setMensagem(String mensagem) {
+        this.mensagem = mensagem;
+    }
+
     public String getTexto() {
         return mensagem;
     }

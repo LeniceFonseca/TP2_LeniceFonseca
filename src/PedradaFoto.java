@@ -6,6 +6,19 @@ public class PedradaFoto extends Pedrada{
     public PedradaFoto() {
     }
 
+    public PedradaFoto(String nomeFicheiro, String legenda) {
+        this.nomeFicheiro = nomeFicheiro;
+        this.legenda = legenda;
+    }
+
+    public void setNomeFicheiro(String nomeFicheiro) {
+        this.nomeFicheiro = nomeFicheiro;
+    }
+
+    public void setLegenda(String legenda) {
+        this.legenda = legenda;
+    }
+
     public String getNomeFicheiro() {
         return nomeFicheiro;
     }
