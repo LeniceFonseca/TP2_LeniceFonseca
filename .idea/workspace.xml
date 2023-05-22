@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90bf6a89-f8ca-4114-9f34-a943a7e1f68b" name="Changes" comment="pedrada digital">
-      <change beforePath="$PROJECT_DIR$/src/Comentario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Comentario.java" afterDir="false" />
+    <list default="true" id="90bf6a89-f8ca-4114-9f34-a943a7e1f68b" name="Changes" comment="display pedradafoto">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pedrada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pedrada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PedradaDigital.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PedradaDigital.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PedradaEvento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PedradaEvento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PedradaFoto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PedradaFoto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PedradaMensagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PedradaMensagem.java" afterDir="false" />
@@ -115,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684768749765</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="display pedradafoto">
+      <created>1684788417309</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1684788417309</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -126,6 +132,7 @@
     <MESSAGE value="mostrar perfil" />
     <MESSAGE value="mudar visibilidade" />
     <MESSAGE value="pedrada digital" />
-    <option name="LAST_COMMIT_MESSAGE" value="pedrada digital" />
+    <MESSAGE value="display pedradafoto" />
+    <option name="LAST_COMMIT_MESSAGE" value="display pedradafoto" />
   </component>
 </project>

@@ -80,6 +80,11 @@ public class PedradaEvento extends Pedrada{
     }
 
     @Override
+    public void displayPorAutor() {
+
+    }
+
+    @Override
     public void criarPost() {
 
     }

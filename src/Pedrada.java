@@ -38,5 +38,6 @@ public abstract class Pedrada {
 
 
     public abstract void display();
+    public abstract void displayPorAutor();
     public abstract void criarPost();
 }

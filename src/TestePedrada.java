@@ -26,6 +26,7 @@ public class TestePedrada {
         PedradaFoto pedradaFoto1 = new PedradaFoto(LocalDateTime.now(), "lens", "caramelo", "sem legenda");
         PedradaFoto pedradaFoto2 = new PedradaFoto(LocalDateTime.now(), "jotaP", "miranha", "sem legenda");
         PedradaFoto pedradaFoto3 = new PedradaFoto(LocalDateTime.now(), "mali", "halloween", "uuuu uuuu");
+        PedradaFoto pedradaFoto4 = new PedradaFoto(LocalDateTime.now(), "mali", "gatoFofo", "cute");
 
         Comentario comentario1 = new Comentario("happy halowween", LocalDateTime.now(), "lens", "halloween");
         Comentario comentario2 = new Comentario("hahahahahahahaha", LocalDateTime.now(), "jotaP", "halloween");
@@ -44,9 +45,11 @@ public class TestePedrada {
 //        pedradaFoto.criarPost();
 //        pedradaFoto1.criarPost();
 //        pedradaFoto2.criarPost();
+//        pedradaFoto4.criarPost();
 //        comentario1.criarComentario();
 //        comentario2.criarComentario();
-        pedradaFoto3.display();
+//        pedradaFoto3.display();
+        pedradaFoto3.displayPorAutor();
 
 
     }

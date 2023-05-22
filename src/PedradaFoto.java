@@ -57,25 +57,24 @@ public class PedradaFoto extends Pedrada{
 
     @Override
     public void display() {
-        String sql = "SELECT p.*, c.comentario FROM pedradafoto p LEFT JOIN comentarios c ON p.id = c.id WHERE c.post = ?";
+        String sql = "SELECT * FROM pedradafoto";
         PreparedStatement preparedStatement = null;
 
 
         try {
 
             preparedStatement = Conexao.getConnection().prepareStatement(sql);
-            preparedStatement.setString(1, getNomeFicheiro());
 
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
                 System.out.println();
                 System.out.println("-------------------------------------------------------------------------------------------------------------");
-                System.out.println("ID: " + resultSet.getInt("p.id"));
-                System.out.println("Autor: " + resultSet.getString("p.autor"));
-                System.out.println("Legenda: " + resultSet.getString("p.legenda"));
-                System.out.println("Data: " + resultSet.getString("p.data"));
-                System.out.println("Comentarios: " + resultSet.getString("c.comentario"));
+                System.out.println("ID: " + resultSet.getInt("id"));
+                System.out.println("Autor: " + resultSet.getString("autor"));
+                System.out.println("Legenda: " + resultSet.getString("legenda"));
+                System.out.println("Data: " + resultSet.getString("data"));
+                System.out.println("Imagem: " + resultSet.getString("imagem"));
                 System.out.println("-------------------------------------------------------------------------------------------------------------");
                 System.out.println();
             }
@@ -87,6 +86,37 @@ public class PedradaFoto extends Pedrada{
 
     }
 
+    @Override
+    public void displayPorAutor() {
+        String sql = "SELECT * FROM pedradafoto WHERE autor = ?";
+        PreparedStatement preparedStatement = null;
+
+        try {
+
+            preparedStatement = Conexao.getConnection().prepareStatement(sql);
+            preparedStatement.setString(1, getAutor());
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                System.out.println();
+                System.out.println("-------------------------------------------------------------------------------------------------------------");
+                System.out.println("ID: " + resultSet.getInt("id"));
+                System.out.println("Autor: " + resultSet.getString("autor"));
+                System.out.println("Imagem: " + resultSet.getString("imagem"));
+                System.out.println("Legenda: " + resultSet.getString("legenda"));
+                System.out.println("Data: " + resultSet.getString("data"));
+                System.out.println("-------------------------------------------------------------------------------------------------------------");
+                System.out.println();
+            }
+
+            preparedStatement.execute();
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
 
     /**

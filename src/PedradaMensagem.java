@@ -42,6 +42,11 @@ public class PedradaMensagem extends Pedrada{
     }
 
     @Override
+    public void displayPorAutor() {
+
+    }
+
+    @Override
     public void criarPost() {
 
     }
